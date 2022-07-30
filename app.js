@@ -10,7 +10,7 @@ app.set('views', path.resolve(__dirname, 'pages'))
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
-const port = process.env.PORT ?? 3000
+const port =  3000
 const logsPath = path.resolve(__dirname, 'data', 'logs.txt')
 
 app.get('/', async (req, res) => {
@@ -25,4 +25,5 @@ app.post('/', async (req, res) => {
   res.redirect('/')
 })
 
+console.log('Hello node!')
 app.listen(port, () => console.log(`Server listening on port ${port}`))
